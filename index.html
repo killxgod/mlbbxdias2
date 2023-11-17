@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="rex.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Online Store</title>
+    
+</head>
+<body>
+
+    <header>
+    
+     <h1> <div class="hhh"> Mobile Legends Bang Bang (MLBB) </div> x Dias </h1>
+    </header>
+
+</div>
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">Products</a>
+        <a href="#">Contact</a>
+        <div class="float-right">
+            <a class="btn btn-primary" href="login.html">Login</a>
+            <a class="btn btn-warning" href="register.html">Register</a>
+        </div>
+    </nav>
+     <br>
+    <div class="abc">
+		<form class="form" role="search" action="file:///C:/Users/Puja/OneDrive/Desktop/alex/Html/index.html" method="get">
+		<div class="wrapp">
+						<label class="text" for="input-2">Products search:</label>
+
+			<input id="input-2" type="search" name="s" value="" placeholder="Search MLBB ..." autocomplete="off">
+			<div class="preloader" style="right: 50px;"></div>
+					</div>
+	</form>
+
+    <section>
+        <article>
+            <img src="C:\Users\Puja\Downloads\Mobile-Legends-Bang-Bang.png">
+            <h2>Mobile Legends Dias</h2>
+            <p>Mobile Legends Diamond Top Up starting from $25</p>
+            <p>Price: $25.00</p>
+            <button onclick="addToCart('MLBB', 25.00)">Add to Cart</button>
+        </article>
+
+        <article>
+            <img src="C:\Users\Puja\Downloads\Free-FIre.png">
+            <h2>Free Fire Diamonds</h2>
+            <p>Free Fire diamonds top up starting from $1.99</p>
+            <p>Price: $35.00</p>
+            <button onclick="addToCart('Free-FIre', 1.99)">Add to Cart</button>
+        </article>
+ 
+        <article>
+            <img src="C:\Users\Puja\Downloads\Netflix-Symbol.png">
+            <h2>Netflix Subscription</h2>
+            <p>Netflix Subscription starting from $2.99</p>
+            <p>Price: $2.99</p>
+            <button onclick="addToCart('Netflix', 2.99)">Add to Cart</button>
+        </article>
+        
+        <article>
+            <img src="C:\Users\Puja\Downloads\efootball-2023-button-fin-1662706485618-300x300.jpg" width="456" height="456">
+            <h2>efootball</h2>
+            <p>
+                efootball coins top up starting from $10.00
+            </p>
+            <p>Price: $10</p>
+            <button onclick="addToCart('efootball', 10.00)">Add to Cart</button>
+        </article>
+        
+        <article>
+            <img src="C:\Users\Puja\Downloads\PUBG-Mobile.png">
+            <h2>PUBG Mobile UC </h2>
+            <p>About PUBG Mobile UC
+                PlayerUnknown Battleground Mobile or PUBG Mobile is an original battle royale-style game. You can create your own character and join a free-for-all battle online with a team or go solo on the battlefield. In-game purchases such as crate box unlock weapon skins, clothes, parachutes, and many more items!</p>
+            <p>Price: $129.00</p>
+            <button onclick="addToCart('PUBG', 129.00)">Add to Cart</button>
+        </article>
+        <!-- Add more articles for additional products -->
+    </section>
+
+    <div class="cart">
+        <h2>Shopping Cart</h2>
+        <ul id="cartItems">
+            
+        </ul>
+        <button onclick="checkout()">Checkout</button>
+    </div>
+
+    <footer>
+        <p>&copy; 2023 Your Online Store. All rights reserved.</p>
+    </footer>
+
+    <script>
+        let cartItems = [];
+
+        function addToCart(productName, price) {
+            cartItems.push({ name: productName, price: price });
+            updateCartDisplay();
+        }
+
+        function updateCartDisplay() {
+            const cartList = document.getElementById('cartItems');
+            cartList.innerHTML = '';
+
+            cartItems.forEach(item => {
+                const li = document.createElement('li');
+                li.innerHTML = `
+                    <span>${item.name}</span>
+                    <span>$${item.price.toFixed(2)}</span>
+                `;
+                cartList.appendChild(li);
+            });
+        }
+
+        function checkout() {
+            
+            
+        }
+    </script>
+</body>
+</html>
